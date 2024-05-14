@@ -1,5 +1,5 @@
 import {useQuery} from "@tanstack/react-query";
-import {getAnimeList} from "../api/anime.js";
+import {getAnimeList, getMangaList, getTrendList} from "../api/anime.js";
 
 const useGetAnimeList = () => {
     return useQuery({
@@ -8,8 +8,24 @@ const useGetAnimeList = () => {
     })
 }
 
+const useGetMangaList = () => {
+    return useQuery({
+        queryKey: ['get', 'manga'],
+        queryFn: getMangaList
+    })
+}
+
+const useGetTrendAnimeList = () => {
+    return useQuery({
+        queryKey: ['get', 'trendAnime'],
+        queryFn: getTrendList
+    })
+}
+
 export const useAnime = () => {
     return {
         useGetAnimeList,
+        useGetMangaList,
+        useGetTrendAnimeList,
     }
 }
