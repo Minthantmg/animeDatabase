@@ -1,10 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import {useAnime} from "../../../hooks/useAnime.js";
 import MainButton from "../MainButton.jsx";
 import placeHolder from "../../assets/placeholder.png"
 const AnimeList = () => {
     const {useGetAnimeList} = useAnime()
-    const {data: anime, isSuccess, isError, isLoading} = useGetAnimeList()
+    const {data: anime, isSuccess} = useGetAnimeList()
     return (
         <div>
             {isSuccess && (
