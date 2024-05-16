@@ -3,6 +3,7 @@ import React from 'react';
 import {useAnime} from "../../../hooks/useAnime.js";
 import MainButton from "../MainButton.jsx";
 import placeHolder from "../../assets/placeholder.png";
+import {Link} from "react-router-dom";
 
 const TrendList = () => {
     const {useGetTrendAnimeList} = useAnime()
@@ -75,13 +76,14 @@ const TrendList = () => {
                                         {item.attributes.description}
                                     </div>
                                     <div className="flex justify-end items-center pt-4">
-                                        <MainButton
-                                            color={`text-black`}
-                                            bg={`bg-white`}
-                                            text="view"
-                                            goTo="/anime"
-                                            hover={`hover:bg-yellow-400 hover:text-white`}
-                                        />
+                                        <Link to={`/detail/${item.id}`}>
+                                            <MainButton
+                                                color={`text-black`}
+                                                bg={`bg-white`}
+                                                text="view"
+                                                hover={`hover:bg-yellow-400 hover:text-white`}
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 lg:rounded-r-lg image-container">
