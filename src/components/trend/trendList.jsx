@@ -7,6 +7,7 @@ import placeHolder from "../../assets/placeholder.png";
 const TrendList = () => {
     const {useGetTrendAnimeList} = useAnime()
     const {data: trend, isSuccess} = useGetTrendAnimeList()
+    console.log(trend)
     return (
         <div>
             {isSuccess && (
