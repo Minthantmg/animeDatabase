@@ -80,3 +80,13 @@ export const getStreamById = async (id) => {
         throw e;
     }
 }
+
+export const getAllCharacters = async (id) => {
+    try {
+        const res = await axiosInstance.get(`media-characters/${id}/character`)
+        console.log(res.data.data)
+        return res.data.data;
+    } catch (e) {
+        throw e;
+    }
+}
