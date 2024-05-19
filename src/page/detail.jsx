@@ -7,16 +7,8 @@ import Description from "../components/detail/description.jsx";
 
 const Detail = () => {
     const {id} = useParams();
-    const {useGetAnimeById, useGetCastingById, useGetCharacterById, useGetEpisodeById, useGetStreamById} = useAnime()
+    const {useGetAnimeById} = useAnime()
     const {data: single} = useGetAnimeById(id)
-    const {data: casting} = useGetCastingById(id)
-    const {data: character} = useGetCharacterById(id)
-    const {data: episode} = useGetEpisodeById(id)
-    const {data: stream} = useGetStreamById(id)
-    console.log(casting)
-    console.log(character)
-    console.log(episode)
-    console.log(stream)
 
     return (
         <div className="lg:pt-28 lg:mx-52 min-h-screen">
@@ -29,7 +21,7 @@ const Detail = () => {
                     <Poster single={single} />
                 </div>
                 <div className="w-3/4">
-                    <Description />
+                    <Description id={id}/>
                 </div>
             </div>
         </div>
