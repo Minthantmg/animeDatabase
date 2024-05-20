@@ -1,6 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
 import {
-    getAllCharacters,
+     getAllEpisodes,
     getAnimeById,
     getAnimeList,
     getCastingById,
@@ -73,10 +73,10 @@ const useGetStreamById = (id) => {
     })
 }
 
-const useGetCharacters = (id) => {
+const useGetEpisodes = (id) => {
     return useQuery({
         queryKey: ['get', 'characters',id],
-        queryFn: () => getAllCharacters(id),
+        queryFn: () => getAllEpisodes(id),
     })
 }
 
@@ -91,6 +91,6 @@ export const useAnime = () => {
         useGetCharacterById,
         useGetEpisodeById,
         useGetStreamById,
-        useGetCharacters,
+        useGetEpisodes,
     }
 }

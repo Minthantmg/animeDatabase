@@ -81,9 +81,9 @@ export const getStreamById = async (id) => {
     }
 }
 
-export const getAllCharacters = async (id) => {
+export const getAllEpisodes = async (id) => {
     try {
-        const res = await axiosInstance.get(`media-characters/${id}/character`)
+        const res = await axiosInstance.get(`anime/${id}/episodes`)
         console.log(res.data.data)
         return res.data.data;
     } catch (e) {
