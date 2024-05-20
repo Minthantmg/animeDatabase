@@ -28,7 +28,9 @@ const Description = ({id}) => {
                 ))}
             </ul>
             <div className="lg:pt-4">
-                {activeTab === 0 ? <Details id={id}/> : activeTab === 1 ? <Characters id={id}/> : activeTab === 2 ? <Episodes/> :
+                {activeTab === 0 ? <Details id={id}/> : activeTab === 1 ? <Characters id={id}/> : activeTab === 2 ?
+                    <Episodes
+                        id={id}/> :
                     <Stat/>}
             </div>
         </div>
