@@ -8,23 +8,29 @@ import Description from "../components/detail/description.jsx";
 const Detail = () => {
     const {id} = useParams();
     const {useGetAnimeById} = useAnime()
-    const {data: single} = useGetAnimeById(id)
+    const {data: single, isSuccess} = useGetAnimeById(id)
 
     return (
-        <div className="lg:pt-28 lg:mx-52 min-h-screen">
-            <span className="text-black lg:text-xl">
-                {single?.attributes.titles.en_jp}
-            </span>
-            <div className="h-[1px] bg-black"></div>
-            <div className="flex text-black">
-                <div className="w-1/4">
-                    <Poster single={single} />
-                </div>
-                <div className="w-3/4">
-                    <Description id={id}/>
-                </div>
-            </div>
-        </div>
+        <>
+            {isSuccess && (
+                <>
+                    <div className="lg:pt-28 lg:mx-52 min-h-screen">
+                       <span className="text-black lg:text-xl">
+                          {single?.attributes.titles.en_jp}
+                       </span>
+                        <div className="h-[1px] bg-black"></div>
+                        <div className="flex text-black">
+                            <div className="w-1/4">
+                                <Poster single={single}/>
+                            </div>
+                            <div className="w-3/4 border-l-2 gray-200">
+                                <Description id={id}/>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            )}
+        </>
     );
 };
 
