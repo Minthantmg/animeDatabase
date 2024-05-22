@@ -28,7 +28,7 @@ const Episodes = ({id}) => {
                                         <div>
                                             {index + 1}.
                                         </div>
-                                        <div>
+                                        <div className="ml-2">
                                             <div className="font-bold text-blue-500">
                                                 {item.attributes.titles.en_us}
                                             </div>
