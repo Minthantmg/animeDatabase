@@ -31,7 +31,7 @@ const Description = ({id}) => {
                 {activeTab === 0 ? <Details id={id}/> : activeTab === 1 ? <Characters id={id}/> : activeTab === 2 ?
                     <Episodes
                         id={id}/> :
-                    <Stat/>}
+                    <Stat id={id}/>}
             </div>
         </div>
     );
