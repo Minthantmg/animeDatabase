@@ -11,7 +11,7 @@ const AnimeList = () => {
         <div>
             {isSuccess && (
                 <>
-                    <div className="mx-52 grid gap-y-10 md:pt-24 my-8">
+                    <div className="mx-52 grid gap-y-10 md:pt-28 py-8">
                         {anime.map((item) => (
                             <div key={item.id} className="flex shadow-lg container">
                                 <div className="w-1/2">
