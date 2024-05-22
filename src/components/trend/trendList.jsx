@@ -9,10 +9,10 @@ const TrendList = () => {
     const {useGetTrendAnimeList} = useAnime()
     const {data: trend, isSuccess} = useGetTrendAnimeList()
     return (
-        <div>
+        <div className="min-h-screen">
             {isSuccess && (
                 <>
-                    <div className="lg:mx-52 grid gap-y-10 pt-20 lg:pt-24 my-8">
+                    <div className="lg:mx-52 grid gap-y-10 pt-20 lg:pt-28 py-8">
                         {trend.map((item) => (
                             <div key={item.id} className="lg:flex shadow-lg container">
                                 <div className="lg:w-1/2">
