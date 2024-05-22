@@ -4,7 +4,7 @@ export const tabs = [
         label: 'Details',
     },
     {
-        label: 'Characters & Staff',
+        label: 'Characters',
     },
     {
         label: 'Episodes',
