@@ -11,20 +11,20 @@ const AnimeList = () => {
         <div>
             {isSuccess && (
                 <>
-                    <div className="mx-52 grid gap-y-10 md:pt-28 py-8">
+                    <div className="mx-4 lg:mx-52 grid gap-y-10 pt-28 py-8">
                         {anime.map((item) => (
-                            <div key={item.id} className="flex shadow-lg container">
-                                <div className="w-1/2">
+                            <div key={item.id} className="lg:flex shadow-lg container">
+                                <div className="lg:w-1/2">
                                     <div className="flex">
                                         <div className="w-1/3">
                                             <img src={item.attributes.posterImage?.original} alt="cover"
                                                  className="w-full rounded-r-lg pl-4 pt-4"/>
                                         </div>
                                         <div className="w-2/3 pl-4 pt-4">
-                                            <div className="font-bold text-2xl font-mono">
+                                            <div className="font-bold text-lg md:text-2xl font-mono">
                                                 {item.attributes.titles.en_jp}
                                             </div>
-                                            <div className="flex gap-1 text-sm text-gray-500 pt-2">
+                                            <div className="md:flex gap-1 text-sm text-gray-500 pt-2">
                                                 <span>Duration : </span>
                                                 <span>{item.attributes.startDate}</span>
                                                 <span>~</span>
@@ -76,7 +76,7 @@ const AnimeList = () => {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="w-1/2 rounded-r-lg image-container">
+                                <div className="hidden md:block lg:w-1/2 rounded-r-lg image-container">
                                     <img
                                         src={item.attributes.coverImage?.original || placeHolder}
                                         alt="cover"
