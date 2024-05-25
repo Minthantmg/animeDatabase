@@ -20,11 +20,11 @@ const Poster = ({ single }) => {
             <div className="p-2">
                 <img src={imageUrl} alt="cover"/>
             </div>
-            <div className="font-bold">
+            <div className="text-[10px] lg:text-sm font-bold">
                 Alternative Titles
             </div>
             <div className="h-[1px] bg-black"></div>
-            <div className="lg:pb-8">
+            <div className="lg:pb-8 pb-4 text-[8px] lg:text-sm">
                 <div className="flex">
                     <span>Synonyms:</span>
                     {/* eslint-disable-next-line react/prop-types */}
@@ -42,11 +42,11 @@ const Poster = ({ single }) => {
                 </div>
             </div>
 
-            <div className="font-bold">
+            <div className="font-bold text-[10px] lg:text-sm">
                 Information
             </div>
             <div className="h-[1px] bg-black"></div>
-            <div className="lg:pb-8">
+            <div className="lg:pb-8 text-[8px] lg:text-sm">
                 <div className="flex">
                     <span>Type:</span>
                     {/* eslint-disable-next-line react/prop-types */}
@@ -83,11 +83,11 @@ const Poster = ({ single }) => {
                 </div>
             </div>
 
-            <div className="font-bold">
+            <div className="font-bold text-[10px] lg:text-sm">
                 Statistics
             </div>
             <div className="h-[1px] bg-black"></div>
-            <div className="lg:pb-8">
+            <div className="lg:pb-8 text-[8px] lg:text-sm">
                 <div className="flex">
                     <span>Score:</span>
                     {/* eslint-disable-next-line react/prop-types */}
