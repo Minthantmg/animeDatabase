@@ -14,7 +14,7 @@ const Detail = () => {
         <>
             {isSuccess && (
                 <>
-                    <div className="lg:pt-28 lg:mx-52 min-h-screen">
+                    <div className="pt-28 lg:pt-28 mx-4 lg:mx-52 min-h-screen">
                        <span className="text-black lg:text-xl">
                           {single?.attributes.titles.en_jp}
                        </span>
