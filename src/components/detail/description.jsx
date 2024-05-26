@@ -17,14 +17,18 @@ const Description = ({id}) => {
 
     return (
         <div className="tabs lg:p-2">
-            <ul className="flex mt-4 gap-4">
+            <ul className="md:flex mt-4 gap-4">
                 {tabs.map((tab, index) => (
-                    <li key={index}
-                        className={`px-6 py-2 cursor-pointer border rounded-lg text-sm 
-                        ${activeTab === index ? 'border-yellow-400 text-yellow-400' : 'border-gray-300'}`}
-                        onClick={() => handleClick(index)}>
+                    <div
+                        key={index}
+                        className={`px-6 py-2 my-2 md:my-0 mx-16 md:mx-0 cursor-pointer border rounded-lg text-xs md:text-sm flex justify-center md:justify-between hover:bg-gray-100 ${
+                            activeTab === index ? 'border-yellow-400 text-yellow-400' : 'border-gray-300'
+                        }`}
+                        onClick={() => handleClick(index)}
+                    >
                         {tab.label}
-                    </li>
+                        {/* Add a responsive icon here (optional) */}
+                    </div>
                 ))}
             </ul>
             <div className="lg:pt-4">
