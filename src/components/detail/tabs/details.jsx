@@ -12,20 +12,20 @@ const Details = ({id}) => {
             {isSuccess && (
                 <div>
                     <div className="text-sm">
-                        <div className="font-bold">
+                        <div className="font-bold ml-1 md:ml-0 mt-2 md:mt-0">
                             Synopsis
                         </div>
                         <div className="h-[1px] bg-black"></div>
                         {/* eslint-disable-next-line react/prop-types */}
-                        <div className="mt-3">{single?.attributes.synopsis}</div>
+                        <div className="mt-3 ml-1 md:ml-0 text-xs">{single?.attributes.synopsis}</div>
 
-                        <div className="font-bold lg:pt-10">
+                        <div className="font-bold ml-1 md:ml-0 lg:pt-10 pt-4">
                             Description
                         </div>
                         <div className="h-[1px] bg-black"></div>
                         {/* eslint-disable-next-line react/prop-types */}
-                        <div className="mt-3">{single?.attributes.description}</div>
-                        <div className="font-bold lg:pt-10">
+                        <div className="mt-3 ml-1 md:ml-0 text-xs">{single?.attributes.description}</div>
+                        <div className="font-bold ml-1 md:ml-0 lg:pt-10">
                             Trailer
                         </div>
                         <div className="h-[1px] bg-black"></div>
