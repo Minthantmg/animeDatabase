@@ -21,31 +21,31 @@ const Stat = ({id}) => {
         <>
             {isSuccess && (
                 <div className="text-sm">
-                    <div className="font-bold">
+                    <div className="font-bold ml-1 md:ml-0">
                         Summary Stats
                     </div>
                     <div className="h-[1px] bg-black"></div>
-                    <div className="mt-1">
+                    <div className="mt-1 ml-1 md:ml-0">
                             <span
                                 className="font-bold">Watching</span>: <span>{numberWithCommas(stat.attributes.userCount)}</span>
                     </div>
-                    <div className="mt-1">
+                    <div className="mt-1 ml-1 md:ml-0">
                         <span
                             className="font-bold">Favorite</span>: <span>{numberWithCommas(stat.attributes.favoritesCount)}</span>
                     </div>
-                    <div className="font-bold mt-4">
+                    <div className="font-bold mt-4 ml-1 md:ml-0">
                         Score Stats
                     </div>
                     <div className="h-[1px] bg-black"></div>
-                    <div className="mt-1">
+                    <div className="mt-1 ml-1 md:ml-0">
                         <span
                             className="font-bold">Popularity Rank</span>: <span>{stat.attributes.popularityRank}</span>
                     </div>
-                    <div className="mt-1">
+                    <div className="mt-1 ml-1 md:ml-0">
                         <span
                             className="font-bold">Score</span>: <span>{stat.attributes.averageRating}</span>
                     </div>
-                    <div className="mt-1">
+                    <div className="mt-1 ml-1 md:ml-0">
                         <span
                             className="font-bold">Total Episodes</span>: <span>{stat.attributes.episodeCount}</span>
                     </div>
