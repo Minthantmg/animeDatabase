@@ -23,7 +23,7 @@ const Episodes = ({id}) => {
                     <div className="my-2">
                         {episode.map((item, index) => (
                             <div key={index} className="my-2">
-                                <div className="flex justify-between">
+                                <div className="md:flex justify-between">
                                     <div className="flex">
                                         <div>
                                             {index + 1}.
@@ -38,7 +38,7 @@ const Episodes = ({id}) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <div>Aired: <span className="text-sm">{formatDate(item.attributes.airdate)}</span></div>
+                                        <div className="ml-6 md:ml-0 mb-4 md:mb-0">Aired: <span className="text-sm">{formatDate(item.attributes.airdate)}</span></div>
                                     </div>
                                 </div>
                                 <div className="h-[1px] bg-black"></div>
