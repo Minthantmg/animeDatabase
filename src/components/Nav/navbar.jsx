@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
 const Navbar = () => {
+    // eslint-disable-next-line no-unused-vars
     const [sticky, setSticky] = useState(false);
     return (
         <nav
