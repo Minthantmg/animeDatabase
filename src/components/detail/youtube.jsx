@@ -6,15 +6,15 @@ import YouTube from "react-youtube";
 // eslint-disable-next-line react/prop-types
 const Youtube = ({ videoId }) => {
     const opts = {
-        height: '257',
-        width: '450',
+        height: '200',
+        width: '300',
         playerVars: {
             autoplay: 0,
         },
     };
     return (
         <div>
-            <YouTube videoId={videoId} opts={opts} />
+            <YouTube videoId={videoId} opts={opts}/>
         </div>
     );
 };
